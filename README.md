@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Advanced Web
 
 Proyecto universitario: aplicación web avanzada usando **HTML, CSS y JavaScript**.
@@ -20,3 +21,6 @@ Proyecto universitario: aplicación web avanzada usando **HTML, CSS y JavaScript
 2. Abrir en VS Code
 3. Ejecutar con Live Server
 
+=======
+# Advanced-Web
+>>>>>>> 9508e66a725ff32130c57d52f9505984f53b51d6
