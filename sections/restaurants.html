@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best Restaurants in Poland</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Best Restaurants in Poland</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="monuments.html">Monuments</a></li>
+                <li><a href="nightlife.html">Nightlife</a></li>
+                <li><a href="parks.html">Parks</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Best Rated Restaurants in 2025</h2>
+            <ol>
+                <li>
+                    <strong>Epoka</strong> (Warsaw)<br>
+                    Modern fine dining, innovative Polish cuisine.<br>
+                    <span>Rating: 5/5</span>
+                    <!-- Comments and ratings section will go here later -->
+                    <div class="restaurant-comments" data-restaurant="Epoka">
+                        <h3>Reviews & Ratings for Epoka</h3>
+                        <form class="comment-form">
+                            <label for="username-epoka">Username:</label>
+                            <input type="text" id="username-epoka" name="username" required>
+
+                            <label for="rating-epoka">Rating:</label>
+                            <select id="rating-epoka" name="rating" required>
+                                <option value="">Choose…</option>
+                                <option value="5">5 ⭐⭐⭐⭐⭐</option>
+                                <option value="4">4 ⭐⭐⭐⭐</option>
+                                <option value="3">3 ⭐⭐⭐</option>
+                                <option value="2">2 ⭐⭐</option>
+                                <option value="1">1 ⭐</option>
+                            </select>
+
+                            <label for="comment-epoka">Comment:</label>
+                            <textarea id="comment-epoka" name="comment" required></textarea>
+
+                            <button type="submit">Add Review</button>
+                        </form>
+                        <ul class="comments-list"></ul>
+                    </div>
+
+                </li>
+
+                <li>
+                    <strong>Bez Gwiazdek</strong> (Warsaw)<br>
+                    Contemporary takes on regional Polish cuisine, changing monthly menu.<br>
+                    <span>Rating: 4.9/5</span>
+                </li>
+                <li>
+                    <strong>Alewino</strong> (Warsaw)<br>
+                    Creative cuisine with an exceptional wine bar experience.<br>
+                    <span>Rating: 4.8/5</span>
+                </li>
+                <li>
+                    <strong>Joel Sharing Concept</strong> (Warsaw)<br>
+                    Shared plates, elegant setting, and bold international flavors.<br>
+                    <span>Rating: 4.8/5</span>
+                </li>
+                <li>
+                    <strong>Stary Dom</strong> (Warsaw)<br>
+                    Classic Polish food in an old-world atmosphere.<br>
+                    <span>Rating: 4.7/5</span>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Explore Warsaw. All rights reserved.</p>
+    </footer>
+
+
+
+
+    <script src="../js/comments.js"></script>
+</body>
+</html>
