@@ -3,44 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>Explore Warsaw</title>
-    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header con título y menú de navegación -->
+    <!-- Header -->
     <header>
-        <h1>Explore Warsaw</h1>
+        <h1>The best experiences in Warsaw</h1>
         <nav>
-            <ul>
-                <li>
-                    <a href="sections/restaurants.html">Restaurants</a>
-                </li>
-                <li>
-                    <a href="sections/monuments.html">Monuments</a>
-                </li>
-                <li>
-                    <a href="sections/nightlife.html">Nightlife</a>
-                </li>
-                <li>
-                    <a href="sections/parks.html">Parks</a>
-                </li>
-                <li>
-                    <a href="sections/login.html">Login</a>
-                </li>
+            <ul class="categories">
+                <li><a href="sections/restaurants.html">Restaurants</a></li>
+                <li><a href="sections/hotels.html">Hotels</a></li>
+                <li><a href="sections/landmarks.html">Landmarks</a></li>
+                <li><a href="sections/museums.html">Museums</a></li>
+                <li><a href="sections/nightlife.html">Nightlife</a></li>
             </ul>
+            <div class="login">
+                <a href="#login">Log in</a>
+            </div>
         </nav>
     </header>
 
-    <!-- Sección principal de bienvenida -->
+    <!-- Main welcome section -->
     <main>
         <section>
             <h2>Welcome to Your Warsaw Adventure!</h2>
-            <p>Discover the best places to eat, visit, and have fun in Poland's vibrant capital. Choose a category from the menu to explore.</p>
+            <p>Discover the best places to eat, stay, visit, and have fun in Poland's vibrant capital. Choose a category from the menu to explore.</p>
+        </section>
+        <section id="restaurants">
+            <h3>Restaurants</h3>
+            <p>
+                Discover Warsaw’s best traditional and modern eateries. From pierogi to fine dining. Neighborhood food tours.
+            </p>
+        </section>
+        <section id="hotels">
+            <h3>Hotels</h3>
+            <ul>
+                <li>Find comfortable stays for every budget.</li>
+                <li>Central locations and hidden gems.</li>
+                <li>Top-rated accommodations.</li>
+            </ul>
+        </section>
+        <section id="landmarks">
+            <h3>Landmarks</h3>
+            <ul>
+                <li>The iconic Palace of Culture and Science.</li>
+                <li>UNESCO-listed Old Town and Royal Castle.</li>
+                <li>Lazienki Park and Wilanów Palace.</li>
+            </ul>
+        </section>
+        <section id="museums">
+            <h3>Museums</h3>
+            <ul>
+                <li>POLIN Museum of the History of Polish Jews.</li>
+                <li>Warsaw Uprising Museum.</li>
+                <li>National Museum and more.</li>
+            </ul>
+        </section>
+        <section id="nightlife">
+            <h3>Nightlife</h3>
+            <ul>
+                <li>Trendy bars and clubs in the city center.</li>
+                <li>Live music and cultural evenings.</li>
+                <li>Praga’s alternative scene.</li>
+            </ul>
+        </section>
+        <section id="tips">
+            <h3>Travel Tips</h3>
+            <ul>
+                <li>How to use public transport.</li>
+                <li>Safety and recommended areas.</li>
+                <li>Best months to visit.</li>
+            </ul>
+        </section>
+        <section id="planner">
+            <h3>Plan Your Trip</h3>
+            <ul>
+                <li>Interactive map (coming soon).</li>
+                <li>Custom itinerary (coming soon).</li>
+            </ul>
         </section>
     </main>
-
-    <!-- Pie de página -->
     <footer>
         <p>&copy; 2025 Explore Warsaw. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

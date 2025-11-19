@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="300"
+   viewBox="0 0 300 300"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="Logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="22.380431"
+     inkscape:cx="102.27685"
+     inkscape:cy="143.29483"
+     inkscape:window-width="1920"
+     inkscape:window-height="1041"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:81.4563px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffcc00;stroke-width:2.77692"
+       x="80.769234"
+       y="160.32655"
+       id="text3"
+       sodipodi:insensitive="true"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="0"
+         y="0"
+         style="stroke-width:2.77692">v</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:81.4563px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffcc00;stroke-width:2.77692"
+       x="101.45911"
+       y="160.32655"
+       id="text4"
+       sodipodi:insensitive="true"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         x="101.45911"
+         y="160.32655"
+         style="stroke-width:2.77692">v</tspan></text>
+    <path
+       style="display:inline;fill:#ff0000"
+       d="m 80.769234,116.66603 h 7.721002 l 12.968874,37.33442 5.55234,-16.80629 3.68709,10.11807 -5.23053,13.01432 h -8.1459 z"
+       id="path6" />
+  </g>
+</svg>
