@@ -2,21 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Best Museums in Poland</title>
+    <title>Top Museums in Warsaw</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Best Museums in Poland</h1>
+        <h1>The Best Experiences In Warsaw</h1>
         <nav>
             <ul class="categories">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="restaurants.html">Restaurants</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
                 <li><a href="landmarks.html">Landmarks</a></li>
+                <li><a href="museums.html" class="active">Museums</a></li>
                 <li><a href="nightlife.html">Nightlife</a></li>
+                <li><a href="guides.html">Guides</a></li>
             </ul>
+            <div class="login"><a href="#login">Log in</a></div>
         </nav>
     </header>
+
+    <main>
+        <section>
+            <h2>Top Rated Museums</h2>
+            <ol>
+                <li style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Warsaw Uprising Museum</h3>
+                            <p>An interactive museum dedicated to the 1944 uprising, a deeply moving historical experience.</p>
+                            <button onclick="addToPlanner('Uprising Museum', 'Museum')" class="planner-btn" style="margin-top: 15px;">❤️ Add to Trip</button>
+                        </div>
+                        <div class="hotel-image-container">
+                            <img src="../multimedia/museums/uprising.jpeg" alt="Uprising Museum" class="hotel-preview-img">
+                        </div>
+                    </div>
+                    <div class="museum-comments" data-museum="Uprising Museum" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                        <form class="comment-form">
+                            <select name="rating" required><option value="">Rating…</option><option value="5">5 ⭐</option><option value="4">4 ⭐</option></select>
+                            <textarea name="comment" required placeholder="Share your thoughts..."></textarea>
+                            <button type="submit">Add Review</button>
+                        </form>
+                        <ul class="comments-list"></ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer><p>&copy; 2025 Explore Warsaw</p></footer>
+    <script src="../js/planner.js"></script>
+    <script src="../js/comments.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>

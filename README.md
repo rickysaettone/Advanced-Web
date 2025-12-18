@@ -7,6 +7,5 @@
 ## Interactive features
 - [ ] Form Validation
 - [ ] Dynamic content updates
-
-## Event handling
+- [ ] Event handling (e.g. clicks, input)
 - [ ] File upload/download

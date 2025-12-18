@@ -2,21 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Best Landmarks in Poland</title>
+    <title>The Best Landmarks In Warsaw</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Best Landmarks in Poland</h1>
+        <h1>The Best Experiences In Warsaw</h1>
         <nav>
             <ul class="categories">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="restaurants.html">Restaurants</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="landmarks.html" class="active">Landmarks</a></li>
                 <li><a href="museums.html">Museums</a></li>
                 <li><a href="nightlife.html">Nightlife</a></li>
+                <li><a href="guides.html">Guides</a></li>
             </ul>
+            <div class="login"><a href="#login">Log in</a></div>
         </nav>
     </header>
+
+    <main>
+        <section>
+            <h2>Must-See Landmarks</h2>
+            <ol>
+                <li style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Palace of Culture and Science</h3>
+                            <p>The tallest building in Poland, offering a stunning panoramic view of the city from the 30th floor.</p>
+                            <button onclick="addToPlanner('Palace of Culture', 'Landmark')" class="planner-btn" style="margin-top: 15px;">❤️ Add to Trip</button>
+                        </div>
+                        <div class="hotel-image-container">
+                            <img src="../multimedia/landmarks/palace.jpeg" alt="Palace of Culture" class="hotel-preview-img">
+                        </div>
+                    </div>
+                    <div class="landmark-comments" data-landmark="Palace of Culture" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                        <form class="comment-form">
+                            <select name="rating" required><option value="">Rating…</option><option value="5">5 ⭐</option><option value="4">4 ⭐</option></select>
+                            <textarea name="comment" required placeholder="How were the views?"></textarea>
+                            <button type="submit">Add Review</button>
+                        </form>
+                        <ul class="comments-list"></ul>
+                    </div>
+                </li>
+
+                <li style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Old Town (Stare Miasto)</h3>
+                            <p>UNESCO World Heritage site, beautifully reconstructed after WWII. The heart of Warsaw's history.</p>
+                            <button onclick="addToPlanner('Old Town', 'Landmark')" class="planner-btn" style="margin-top: 15px;">❤️ Add to Trip</button>
+                        </div>
+                        <div class="hotel-image-container">
+                            <img src="../multimedia/landmarks/old_town.jpeg" alt="Old Town" class="hotel-preview-img">
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer><p>&copy; 2025 Explore Warsaw</p></footer>
+    <script src="../js/planner.js"></script>
+    <script src="../js/comments.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>

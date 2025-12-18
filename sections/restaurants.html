@@ -2,87 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Best Restaurants in Poland</title>
+    <title>Best Restaurants in Warsaw</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Best Restaurants in Poland</h1>
+        <h1>The Best Experiences In Warsaw</h1>
         <nav>
             <ul class="categories">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="sections/hotels.html">Hotels</a></li>
-                <li><a href="sections/landmarks.html">Landmarks</a></li>
-                <li><a href="sections/museums.html">Museums</a></li>
-                <li><a href="sections/nightlife.html">Nightlife</a></li>
+                <li><a href="../index.html">Home</a></li> 
+                <li><a href="restaurants.html" class="active">Restaurants</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="landmarks.html">Landmarks</a></li>
+                <li><a href="museums.html">Museums</a></li>
+                <li><a href="nightlife.html">Nightlife</a></li>
+                <li><a href="guides.html">Guides</a></li>
             </ul>
+            <div class="login">
+                <a href="#login">Log in</a>
+            </div>
         </nav>
     </header>
+
     <main>
         <section>
             <h2>Best Rated Restaurants in 2025</h2>
             <ol>
-                <li>
-                    <strong>Epoka</strong> (Warsaw)<br>
-                    Modern fine dining, innovative Polish cuisine.<br>
-                    <span>Rating: 5/5</span>
-                    <!-- Comments and ratings section will go here later -->
-                    <div class="restaurant-comments" data-restaurant="Epoka">
-                        <h3>Reviews & Ratings for Epoka</h3>
+                <li style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Epoka</h3>
+                            <p>Modern fine dining and innovative Polish cuisine that reimagines historical recipes.</p>
+                            <span style="display: block; margin-top: 10px;">Rating: 5/5</span>
+                            <button onclick="addToPlanner('Epoka', 'Restaurant')" class="planner-btn" style="margin-top: 15px;">
+                                ❤️ Add to Trip
+                            </button>
+                        </div>
+                        <div class="hotel-image-container">
+                            <img src="../multimedia/restaurants/epoka.jpeg" alt="Epoka" class="hotel-preview-img">
+                        </div>
+                    </div>
+                    <div class="restaurant-comments" data-restaurant="Epoka" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
                         <form class="comment-form">
-                            <label for="username-epoka">Username:</label>
-                            <input type="text" id="username-epoka" name="username" required>
-
-                            <label for="rating-epoka">Rating:</label>
-                            <select id="rating-epoka" name="rating" required>
-                                <option value="">Choose…</option>
-                                <option value="5">5 ⭐⭐⭐⭐⭐</option>
-                                <option value="4">4 ⭐⭐⭐⭐</option>
-                                <option value="3">3 ⭐⭐⭐</option>
-                                <option value="2">2 ⭐⭐</option>
-                                <option value="1">1 ⭐</option>
+                            <select name="rating" required>
+                                <option value="">Rating…</option>
+                                <option value="5">5 ⭐</option>
+                                <option value="4">4 ⭐</option>
                             </select>
-
-                            <label for="comment-epoka">Comment:</label>
-                            <textarea id="comment-epoka" name="comment" required></textarea>
-
+                            <textarea name="comment" required placeholder="Write your review..."></textarea>
                             <button type="submit">Add Review</button>
                         </form>
                         <ul class="comments-list"></ul>
                     </div>
-
                 </li>
 
-                <li>
-                    <strong>Bez Gwiazdek</strong> (Warsaw)<br>
-                    Contemporary takes on regional Polish cuisine, changing monthly menu.<br>
-                    <span>Rating: 4.9/5</span>
-                </li>
-                <li>
-                    <strong>Alewino</strong> (Warsaw)<br>
-                    Creative cuisine with an exceptional wine bar experience.<br>
-                    <span>Rating: 4.8/5</span>
-                </li>
-                <li>
-                    <strong>Joel Sharing Concept</strong> (Warsaw)<br>
-                    Shared plates, elegant setting, and bold international flavors.<br>
-                    <span>Rating: 4.8/5</span>
-                </li>
-                <li>
-                    <strong>Stary Dom</strong> (Warsaw)<br>
-                    Classic Polish food in an old-world atmosphere.<br>
-                    <span>Rating: 4.7/5</span>
+                <li style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Bez Gwiazdek</h3>
+                            <p>Contemporary takes on regional Polish cuisine with a monthly changing menu.</p>
+                            <span style="display: block; margin-top: 10px;">Rating: 4.9/5</span>
+                            <button onclick="addToPlanner('Bez Gwiazdek', 'Restaurant')" class="planner-btn" style="margin-top: 15px;">
+                                ❤️ Add to Trip
+                            </button>
+                        </div>
+                        <div class="hotel-image-container">
+                            <img src="../multimedia/restaurants/bez_gwiazdek.jpeg" alt="Bez Gwiazdek" class="hotel-preview-img">
+                        </div>
+                    </div>
+                    <div class="restaurant-comments" data-restaurant="Bez Gwiazdek" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                        <form class="comment-form">
+                            <textarea name="comment" required placeholder="How was the food?"></textarea>
+                            <button type="submit">Add Review</button>
+                        </form>
+                        <ul class="comments-list"></ul>
+                    </div>
                 </li>
             </ol>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 Explore Warsaw. All rights reserved.</p>
     </footer>
 
-
-
-
-    <!-- <script src="../js/comments.js"></script> -->
+    <script src="../js/planner.js"></script>
+    <script src="../js/comments.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>

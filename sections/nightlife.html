@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Best Nightlife in Poland</title>
+    <title>Nightlife in Warsaw</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Best Nightlife in Poland</h1>
+        <h1>The Best Experiences In Warsaw</h1>
         <nav>
             <ul class="categories">
                 <li><a href="../index.html">Home</a></li>
@@ -15,8 +15,43 @@
                 <li><a href="hotels.html">Hotels</a></li>
                 <li><a href="landmarks.html">Landmarks</a></li>
                 <li><a href="museums.html">Museums</a></li>
+                <li><a href="nightlife.html" class="active">Nightlife</a></li>
+                <li><a href="guides.html">Guides</a></li>
             </ul>
+            <div class="login"><a href="#login">Log in</a></div>
         </nav>
     </header>
+
+    <main>
+        <section>
+            <h2>Best Clubs and Bars</h2>
+            <ol>
+                <li style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Luzztro</h3>
+                            <p>Legendary electronic music club known for its underground atmosphere and staying open until dawn.</p>
+                            <button onclick="addToPlanner('Luzztro', 'Club')" class="planner-btn" style="margin-top: 15px;">❤️ Add to Trip</button>
+                        </div>
+                        <div class="hotel-image-container">
+                            <img src="../multimedia/nightlife/luzztro.jpeg" alt="Luzztro Club" class="hotel-preview-img">
+                        </div>
+                    </div>
+                    <div class="nightlife-comments" data-nightlife="Luzztro" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                        <form class="comment-form">
+                            <select name="rating" required><option value="">Rating…</option><option value="5">5 ⭐</option><option value="4">4 ⭐</option></select>
+                            <textarea name="comment" required placeholder="How was the music?"></textarea>
+                            <button type="submit">Add Review</button>
+                        </form>
+                        <ul class="comments-list"></ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+    <footer><p>&copy; 2025 Explore Warsaw</p></footer>
+    <script src="../js/planner.js"></script>
+    <script src="../js/comments.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>

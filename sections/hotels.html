@@ -2,85 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Best Hotels in Poland</title>
+    <title>The Best Hotels In Warsaw</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Best Hotels in Poland</h1>
+        <h1>The Best Experiences In Warsaw</h1>
         <nav>
             <ul class="categories">
-                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li> 
                 <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="hotels.html" class="active">Hotels</a></li>
                 <li><a href="landmarks.html">Landmarks</a></li>
                 <li><a href="museums.html">Museums</a></li>
                 <li><a href="nightlife.html">Nightlife</a></li>
+                <li><a href="guides.html">Guides</a></li>
             </ul>
+            <div class="login">
+                <a href="#login">Log in</a>
+            </div>
         </nav>
     </header>
+
     <main>
         <section>
             <h2>Best Rated Hotels in Warsaw 2025</h2>
             <ol>
-                <li>
-                    <strong>Raffles Europejski</strong> (Warsaw)<br>
-                    Iconic luxury hotel overlooking the Royal Route, historic elegance and modern comforts.<br>
-                    <span>Rating: 5/5</span>
-                    <div class="hotel-comments" data-hotel="Raffles Europejski">
-                        <h3>Reviews & Ratings for Raffles Europejski</h3>
+                <li style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Raffles Europejski</h3>
+                            <p>Iconic luxury hotel overlooking the Royal Route with historic elegance.</p>
+                            <span style="display: block; margin-top: 10px;">Rating: 5/5</span>
+                            <button onclick="addToPlanner('Raffles Europejski', 'Hotel')" class="planner-btn" style="margin-top: 15px;">
+                                ❤️ Add to Trip
+                            </button>
+                        </div>
+                        <div class="hotel-image-container">
+                            <img src="../multimedia/hotels/raffles_europejski.jpeg" alt="Raffles" class="hotel-preview-img">
+                        </div>
+                    </div>
+                    <div class="hotel-comments" data-hotel="Raffles Europejski" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
                         <form class="comment-form">
-                            <label for="username-raffles">Username:</label>
-                            <input type="text" id="username-raffles" name="username" required>
-
-                            <label for="rating-raffles">Rating:</label>
-                            <select id="rating-raffles" name="rating" required>
-                                <option value="">Choose…</option>
-                                <option value="5">5 ⭐⭐⭐⭐⭐</option>
-                                <option value="4">4 ⭐⭐⭐⭐</option>
-                                <option value="3">3 ⭐⭐⭐</option>
-                                <option value="2">2 ⭐⭐</option>
-                                <option value="1">1 ⭐</option>
+                            <select name="rating" required>
+                                <option value="">Rating…</option>
+                                <option value="5">5 ⭐</option>
+                                <option value="4">4 ⭐</option>
                             </select>
-
-                            <label for="comment-raffles">Comment:</label>
-                            <textarea id="comment-raffles" name="comment" required></textarea>
-
+                            <textarea name="comment" required placeholder="Share your experience..."></textarea>
                             <button type="submit">Add Review</button>
                         </form>
                         <ul class="comments-list"></ul>
                     </div>
                 </li>
 
-                <li>
-                    <strong>Hotel Bristol, a Luxury Collection Hotel</strong> (Warsaw)<br>
-                    Timeless luxury next to the Presidential Palace with refined service and historic charm.<br>
-                    <span>Rating: 4.9/5</span>
-                </li>
-                <li>
-                    <strong>InterContinental Warsaw</strong> (Warsaw)<br>
-                    Contemporary skyline hotel with panoramic views and modern amenities.<br>
-                    <span>Rating: 4.8/5</span>
-                </li>
-                <li>
-                    <strong>Sofitel Warsaw Victoria</strong> (Warsaw)<br>
-                    Elegant design, fine dining, and a central location near major attractions.<br>
-                    <span>Rating: 4.7/5</span>
-                </li>
-                <li>
-                    <strong>H15 Boutique Hotel</strong> (Warsaw)<br>
-                    Stylish boutique stay with personalized service and intimate atmosphere.<br>
-                    <span>Rating: 4.6/5</span>
+                <li style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Hotel Bristol</h3>
+                            <p>Timeless luxury next to the Presidential Palace with refined service.</p>
+                            <span style="display: block; margin-top: 10px;">Rating: 4.9/5</span>
+                            <button onclick="addToPlanner('Hotel Bristol', 'Hotel')" class="planner-btn" style="margin-top: 15px;">
+                                ❤️ Add to Trip
+                            </button>
+                        </div>
+                        <div class="hotel-image-container">
+                            <img src="../multimedia/hotels/bristol.jpeg" alt="Bristol" class="hotel-preview-img">
+                        </div>
+                    </div>
+                    <div class="hotel-comments" data-hotel="Hotel Bristol" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                        <form class="comment-form">
+                            <textarea name="comment" required placeholder="How was your stay?"></textarea>
+                            <button type="submit">Add Review</button>
+                        </form>
+                        <ul class="comments-list"></ul>
+                    </div>
                 </li>
             </ol>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 Explore Warsaw. All rights reserved.</p>
     </footer>
 
-
-
-
+    <script src="../js/planner.js"></script>
     <script src="../js/comments.js"></script>
+    <script src="../js/auth.js"></script>
 </body>
 </html>
