@@ -1,10 +1,13 @@
-// js/planner.js
+/**
+ * TRIP PLANNER (Itinerary)
+ * Allows saving favorite destinations in a global list.
+ */
 
-// Función para agregar item (se llamará desde los botones en HTML)
+// Add a place to LocalStorage
 function addToPlanner(placeName, category) {
     let itinerary = JSON.parse(localStorage.getItem('myTrip')) || [];
     
-    // Evitar duplicados
+    // Duplicate check to avoid adding the same place twice
     if (!itinerary.some(item => item.name === placeName)) {
         itinerary.push({ name: placeName, category: category });
         localStorage.setItem('myTrip', JSON.stringify(itinerary));
@@ -14,35 +17,35 @@ function addToPlanner(placeName, category) {
     }
 }
 
-// Función para mostrar el itinerario (Solo corre en index.html)
+// Load the itinerary on the Home (index.html)
 document.addEventListener('DOMContentLoaded', () => {
     const plannerList = document.getElementById('planner-list');
-    
-    if (plannerList) {
-        const itinerary = JSON.parse(localStorage.getItem('myTrip')) || [];
-        
-        if (itinerary.length === 0) {
-            plannerList.innerHTML = '<li>No places added yet. Go explore!</li>';
-        } else {
-            plannerList.innerHTML = '';
-            itinerary.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.innerHTML = `
-                    <strong>${item.name}</strong> <small>(${item.category})</small> 
-                    <button class="remove-btn" data-index="${index}" style="margin-left:10px; color:red; cursor:pointer; border:none; background:none;">X</button>
-                `;
-                plannerList.appendChild(li);
-            });
+    if (!plannerList) return; // If we're not on the Home page, exit
 
-            // Event handling para borrar items
-            document.querySelectorAll('.remove-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const idx = e.target.getAttribute('data-index');
-                    itinerary.splice(idx, 1);
-                    localStorage.setItem('myTrip', JSON.stringify(itinerary));
-                    location.reload(); // Recargar para actualizar lista
-                });
-            });
-        }
+    const itinerary = JSON.parse(localStorage.getItem('myTrip')) || [];
+    
+    if (itinerary.length === 0) {
+        plannerList.innerHTML = '<li>Your trip is empty. Start exploring!</li>';
+    } else {
+        plannerList.innerHTML = '';
+        itinerary.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.style.display = "flex";
+            li.style.justifyContent = "space-between";
+            li.style.padding = "5px 0";
+            li.innerHTML = `
+                <span><strong>${item.name}</strong> (${item.category})</span>
+                <button onclick="removeItem(${index})" style="background:none; border:none; color:red; cursor:pointer;">✖</button>
+            `;
+            plannerList.appendChild(li);
+        });
     }
 });
+
+// Global function to remove items from the itinerary
+function removeItem(index) {
+    let itinerary = JSON.parse(localStorage.getItem('myTrip')) || [];
+    itinerary.splice(index, 1);
+    localStorage.setItem('myTrip', JSON.stringify(itinerary));
+    location.reload(); // Refresh to show changes
+}

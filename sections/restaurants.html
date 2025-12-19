@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Best Restaurants in Warsaw</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../multimedia/favicon.ico" />
 </head>
 <body>
     <header>
@@ -48,6 +49,9 @@
                                 <option value="">Rating…</option>
                                 <option value="5">5 ⭐</option>
                                 <option value="4">4 ⭐</option>
+                                <option value="3">3 ⭐</option>
+                                <option value="2">2 ⭐</option>
+                                <option value="1">1 ⭐</option>
                             </select>
                             <textarea name="comment" required placeholder="Write your review..."></textarea>
                             <button type="submit">Add Review</button>
@@ -72,6 +76,14 @@
                     </div>
                     <div class="restaurant-comments" data-restaurant="Bez Gwiazdek" style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
                         <form class="comment-form">
+                            <select name="rating" required>
+                                <option value="">Rating…</option>
+                                <option value="5">5 ⭐</option>
+                                <option value="4">4 ⭐</option>
+                                <option value="3">3 ⭐</option>
+                                <option value="2">2 ⭐</option>
+                                <option value="1">1 ⭐</option>
+                            </select>
                             <textarea name="comment" required placeholder="How was the food?"></textarea>
                             <button type="submit">Add Review</button>
                         </form>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Inyectar el HTML del Modal (Ahora con dos formularios: Login y Registro)
+    // 1. Inject the Modal HTML (Now with two forms: Login and Register)
     const modalHTML = `
     <div id="authModal" class="modal">
         <div class="modal-content">
@@ -33,34 +33,34 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>`;
     
-    // Evitar duplicar el modal si el script se carga dos veces
+    // Prevent duplicating the modal if the script loads twice
     if (!document.getElementById('authModal')) {
         document.body.insertAdjacentHTML('beforeend', modalHTML);
     }
 
-    // 2. Referencias a elementos
+    // 2. Element references
     const loginLink = document.querySelector('.login a');
     const modal = document.getElementById('authModal');
     const closeBtn = document.querySelector('.close-btn');
     
-    // Contenedores y Forms
+    // Containers and Forms
     const loginContainer = document.getElementById('loginContainer');
     const registerContainer = document.getElementById('registerContainer');
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
     
-    // Links para cambiar entre Login/Registro
+    // Links to switch between Login/Register
     const showRegisterBtn = document.getElementById('showRegister');
     const showLoginBtn = document.getElementById('showLogin');
 
-    // Errores
+    // Errors
     const loginError = document.getElementById('loginError');
     const regError = document.getElementById('regError');
 
-    // 3. Verificar estado inicial
+    // 3. Check initial status
     checkLoginStatus();
 
-    // 4. Lógica de Apertura/Cierre del Modal
+    // 4. Modal Open/Close logic
     if (loginLink) {
         loginLink.addEventListener('click', (e) => {
             e.preventDefault();
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     logout();
                 }
             } else {
-                // Abrir Modal (resetear vista a Login siempre)
+                // Open Modal (always reset view to Login)
                 showLoginForm();
                 modal.style.display = 'block';
                 loginError.style.display = 'none';
@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target == modal) modal.style.display = 'none';
     });
 
-    // 5. Cambiar entre Login y Registro
+    // 5. Switch between Login and Register
     showRegisterBtn.addEventListener('click', () => {
         loginContainer.style.display = 'none';
         registerContainer.style.display = 'block';
-        regError.style.display = 'none'; // Limpiar errores previos
+        regError.style.display = 'none'; // Clear previous errors
     });
 
     showLoginBtn.addEventListener('click', showLoginForm);
@@ -103,16 +103,16 @@ document.addEventListener('DOMContentLoaded', () => {
         loginError.style.display = 'none';
     }
 
-    // 6. Lógica de REGISTRO (Sign Up)
+    // 6. REGISTER logic (Sign Up)
     registerForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const user = document.getElementById('regUser').value.trim();
         const pass = document.getElementById('regPass').value.trim();
 
-        // Obtener usuarios existentes
+        // Get existing users
         const usersDB = JSON.parse(localStorage.getItem('registeredUsers')) || [];
 
-        // Verificar si ya existe
+        // Check if it already exists
         const exists = usersDB.find(u => u.username === user);
         if (exists) {
             regError.textContent = "⚠️ This username is already taken.";
@@ -120,15 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Guardar nuevo usuario
+        // Save new user
         usersDB.push({ username: user, password: pass });
         localStorage.setItem('registeredUsers', JSON.stringify(usersDB));
 
         alert('Account created successfully! Please log in.');
-        showLoginForm(); // Volver al login para que entre
+        showLoginForm(); // Return to login so they can sign in
     });
 
-    // 7. Lógica de LOGIN
+    // 7. LOGIN logic
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const user = document.getElementById('loginUser').value.trim();
@@ -136,15 +136,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const usersDB = JSON.parse(localStorage.getItem('registeredUsers')) || [];
 
-        // Buscar usuario que coincida nombre Y contraseña
+        // Find user matching username AND password
         const validUser = usersDB.find(u => u.username === user && u.password === pass);
 
         if (validUser) {
-            // Login exitoso
+            // Successful login
             localStorage.setItem('currentUser', validUser.username);
             modal.style.display = 'none';
             checkLoginStatus();
-            // Recargar la página para que se desbloqueen los comentarios
+            // Reload the page so comments are unlocked
             location.reload(); 
         } else {
             // Error
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Funciones auxiliares
+    // Helper functions
     function checkLoginStatus() {
         const user = localStorage.getItem('currentUser');
         if (user && loginLink) {

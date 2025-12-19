@@ -80,15 +80,15 @@ ul.categories li a.active {
 .login a:hover {
     background: #d5fa5a;
 }
-
 main {
-    max-width: 900px;  
+    max-width: 1000px; /* Standard max width for all pages */
+    width: 90%;        /* So on small screens it doesn't stick to the edges */
     margin: 2rem auto;
     background: #fff;
     padding: 2.5rem 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(57,83,106,0.10);
-    flex: 1;
+    flex: 1; /* This helps with the sticky footer we made earlier */
 }
 
 main section {
@@ -160,14 +160,14 @@ footer {
 
 /* --- LOGIN MODAL STYLES --- */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none; /* Hidden by default */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6); /* Fondo oscuro transparente */
+    background-color: rgba(0,0,0,0.6); /* Transparent dark background */
     backdrop-filter: blur(5px);
 }
 
@@ -241,13 +241,13 @@ footer {
     color: #d4192f;
     font-size: 0.85rem;
     margin-top: 10px;
-    display: none; /* Oculto por defecto */
+    display: none; /* Hidden by default */
 }
 
 /* --- GUIDES SECTION --- */
 .guides-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -263,7 +263,7 @@ footer {
 }
 
 .book-card:hover {
-    transform: translateY(-5px); /* Pequeña animación al pasar el mouse */
+    transform: translateY(-5px); /* Small animation on hover */
     border-color: #39536a;
 }
 
@@ -286,24 +286,24 @@ footer {
 }
 
 .download-btn:hover {
-    background-color: #d4192f; /* Rojo al pasar el mouse */
+    background-color: #d4192f; /* Red on hover */
 }
 
-/* Estilos para las imágenes de hoteles/restaurantes */
+/* Styles for hotel/restaurant images */
 .hotel-image-container {
-    flex-shrink: 0; /* Evita que la imagen se encoja */
+    flex-shrink: 0; /* Prevents the image from shrinking */
 }
 
 .hotel-preview-img {
-    width: 150px;      /* Ancho fijo para las miniaturas */
-    height: 100px;     /* Alto fijo */
-    object-fit: cover; /* Recorta la imagen para que rellene el espacio sin deformarse */
+    width: 150px;      /* Fixed width for thumbnails */
+    height: 100px;     /* Fixed height */
+    object-fit: cover; /* Crops the image to fill space without distortion */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     border: 1px solid #ddd;
 }
 
-/* Ajuste para móviles */
+/* Adjustment for mobile */
 @media (max-width: 600px) {
     li div[style*="flex"] {
         flex-direction: column;
@@ -316,4 +316,62 @@ footer {
         height: auto;
         margin: 10px 0;
     }
+}
+
+/* Home grid */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive: adapts to width */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Individual cards */
+.category-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(57, 83, 106, 0.1);
+    border-color: #39536a;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.category-card h3 {
+    color: #39536a;
+    margin-bottom: 0.5rem;
+}
+
+.category-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Button-like link inside the card */
+.card-link {
+    text-decoration: none;
+    color: #d4192f; /* Rojo Polonia */
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: #39536a;
 }

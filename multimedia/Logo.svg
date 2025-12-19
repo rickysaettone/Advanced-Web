@@ -23,11 +23,11 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
-     inkscape:zoom="22.380431"
-     inkscape:cx="102.27685"
-     inkscape:cy="143.29483"
-     inkscape:window-width="1920"
-     inkscape:window-height="1041"
+     inkscape:zoom="1.9781693"
+     inkscape:cx="-58.134558"
+     inkscape:cy="132.95121"
+     inkscape:window-width="1894"
+     inkscape:window-height="1015"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -40,7 +40,7 @@
      id="layer1">
     <text
        xml:space="preserve"
-       style="font-size:81.4563px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffcc00;stroke-width:2.77692"
+       style="font-size:81.4563px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:none;fill:#ffcc00;stroke-width:2.77692"
        x="80.769234"
        y="160.32655"
        id="text3"
@@ -52,15 +52,17 @@
          style="stroke-width:2.77692">v</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:81.4563px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffcc00;stroke-width:2.77692"
+       style="font-size:81.4563px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:#ffcc00;stroke-width:2.77692"
        x="101.45911"
        y="160.32655"
        id="text4"
-       sodipodi:insensitive="true"><tspan
+       inkscape:export-filename="logo.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan4"
-         x="101.45911"
-         y="160.32655"
+         x="0"
+         y="0"
          style="stroke-width:2.77692">v</tspan></text>
     <path
        style="display:inline;fill:#ff0000"
